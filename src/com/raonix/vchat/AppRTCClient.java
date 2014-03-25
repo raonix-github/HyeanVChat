@@ -60,10 +60,10 @@ import java.util.regex.Pattern;
 public class AppRTCClient {
 	private static final String TAG = "AppRTCClient";
 	
-	private static final String LOCAL_ID = "test8@iunplug.co.kr";
-	private static final String LOCAL_PW = "iunplug1234";
-	private static final String REMOTE_ID = "test7@iunplug.co.kr";
-	private static final boolean IS_INITIATOR = true;
+	private String LOCAL_ID;
+	private String LOCAL_PW;
+	private String REMOTE_ID;
+	private boolean IS_INITIATOR;
 	
 	private XmppClient mXmppClient;
 	private final XmppClient.OnMessageListener xmppListener;
@@ -94,11 +94,27 @@ public class AppRTCClient {
 		this.activity = activity;
 		this.xmppListener = xmppListener;
 		this.iceServersObserver = iceServersObserver;
+		
+		if(Build.MODE_SERVER)
+		{
+			LOCAL_ID = "test7@iunplug.co.kr";
+			LOCAL_PW = "iunplug1234";
+			REMOTE_ID = "test8@iunplug.co.kr";
+			IS_INITIATOR = true;
+		}
+		else
+		{
+			LOCAL_ID = "test8@iunplug.co.kr";
+			LOCAL_PW = "iunplug1234";
+			REMOTE_ID = "test7@iunplug.co.kr";
+			IS_INITIATOR = false;
+		}
 	}
 
 	public void logIn() {
         Log.d(TAG, Thread.currentThread().getStackTrace()[2].getMethodName());
         
+
         /////////////////////////////////////////////
         /////////////////////////////////////////////
         /////////////////////////////////////////////
@@ -112,7 +128,7 @@ public class AppRTCClient {
         /////////////////////////////////////////////
 //		mXmppClient.setHost(null, 0, null);
 // 		mXmppClient.setUser(null, null);
-		mXmppClient.setHost("iunplug.co.kr", 0, "iunplug.co.kr");
+		mXmppClient.setHost("iunplug.co.kr", 5222, "iunplug.co.kr");
  		mXmppClient.setUser(LOCAL_ID, LOCAL_PW);
 		mXmppClient.connect(true);
 	}

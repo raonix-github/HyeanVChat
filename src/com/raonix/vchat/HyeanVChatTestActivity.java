@@ -99,13 +99,16 @@ public class HyeanVChatTestActivity extends Activity
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 //		Point displaySize = new Point(400,400);
-		Point displaySize = new Point();
-		getWindowManager().getDefaultDisplay().getSize(displaySize);
-		vsv = new VideoStreamsView(this, displaySize);
+//		Point displaySize = new Point();
+//		getWindowManager().getDefaultDisplay().getSize(displaySize);
+//		vsv = new VideoStreamsView(this, displaySize);
+
+		vsv = new VideoStreamsView(this);
 		setContentView(vsv);
 
 		abortUnless(PeerConnectionFactory.initializeAndroidGlobals(this),
 				"Failed to initializeAndroidGlobals");
+
 		AudioManager audioManager =
 			((AudioManager) getSystemService(AUDIO_SERVICE));
 		// TODO(fischman): figure out how to do this Right(tm) and remove the
