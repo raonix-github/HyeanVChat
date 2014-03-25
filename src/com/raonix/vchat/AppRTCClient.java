@@ -265,7 +265,12 @@ public class AppRTCClient {
 			String pcConfig = "{\"iceServers\": [{\"url\": \"stun:stun.l.google.com:19302\"}]}";
 			String pcConstraintsStr = "{\"optional\": [{\"DtlsSrtpKeyAgreement\": true}]}";
 			String offerConstraints = "{\"optional\": [], \"mandatory\": {}};";
-			String mediaConstraints = "{\"audio\": true, \"video\": true}";
+			String mediaConstraints;
+			if(Build.MODE_SERVER)
+				mediaConstraints = "{\"audio\": true, \"video\": true}";
+			else
+				mediaConstraints = "{\"audio\": true, \"video\": false}";
+
 			String turnUrl = "https://computeengineondemand.appspot.com/turn?username=85958471&key=4080218913";
 
 			boolean stereo = false;

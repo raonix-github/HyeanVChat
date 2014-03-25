@@ -122,7 +122,12 @@ public class HyeanVChatTestActivity extends Activity
 		sdpMediaConstraints = new MediaConstraints();
 		sdpMediaConstraints.mandatory.add(new MediaConstraints.KeyValuePair(
 					"OfferToReceiveAudio", "true"));
-		sdpMediaConstraints.mandatory.add(new MediaConstraints.KeyValuePair(
+
+		if(Build.MODE_SERVER)
+			sdpMediaConstraints.mandatory.add(new MediaConstraints.KeyValuePair(
+					"OfferToReceiveVideo", "false"));
+		else
+			sdpMediaConstraints.mandatory.add(new MediaConstraints.KeyValuePair(
 					"OfferToReceiveVideo", "true"));
 		
 		logAndToast("Connecting to room...");
