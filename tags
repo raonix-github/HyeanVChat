@@ -1,0 +1,191 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AppRTCClient	src/com/raonix/vchat/AppRTCClient.java	/^  public AppRTCClient($/;"	m	class:AppRTCClient
+AppRTCClient	src/com/raonix/vchat/AppRTCClient.java	/^public class AppRTCClient {$/;"	c
+AppRTCSignalingParameters	src/com/raonix/vchat/AppRTCClient.java	/^    public AppRTCSignalingParameters($/;"	m	class:AppRTCClient.AppRTCSignalingParameters
+AppRTCSignalingParameters	src/com/raonix/vchat/AppRTCClient.java	/^  private class AppRTCSignalingParameters {$/;"	c	class:AppRTCClient
+BuildConfig	gen/com/raonix/vchat/BuildConfig.java	/^public final class BuildConfig {$/;"	c
+DEBUG	gen/com/raonix/vchat/BuildConfig.java	/^    public final static boolean DEBUG = true;$/;"	f	class:BuildConfig
+Endpoint	src/com/raonix/vchat/VideoStreamsView.java	/^  public static enum Endpoint { LOCAL, REMOTE };$/;"	g	class:VideoStreamsView
+FRAGMENT_SHADER_STRING	src/com/raonix/vchat/VideoStreamsView.java	/^  private static final String FRAGMENT_SHADER_STRING =$/;"	f	class:VideoStreamsView	file:
+FramePool	src/com/raonix/vchat/FramePool.java	/^class FramePool {$/;"	c
+GAEChannelClient	src/com/raonix/vchat/GAEChannelClient.java	/^  public GAEChannelClient($/;"	m	class:GAEChannelClient
+GAEChannelClient	src/com/raonix/vchat/GAEChannelClient.java	/^public class GAEChannelClient {$/;"	c
+GAEHandler	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private class GAEHandler implements GAEChannelClient.MessageHandler {$/;"	c	class:HyeanVChatTestActivity
+HyeanVChatTestActivity	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^public class HyeanVChatTestActivity extends Activity$/;"	c
+IceServersObserver	src/com/raonix/vchat/AppRTCClient.java	/^  public static interface IceServersObserver {$/;"	i	class:AppRTCClient
+LOCAL	src/com/raonix/vchat/VideoStreamsView.java	/^  public static enum Endpoint { LOCAL, REMOTE };$/;"	e	enum:VideoStreamsView.Endpoint	file:
+MAX_DIMENSION	src/com/raonix/vchat/FramePool.java	/^  private static final long MAX_DIMENSION = 4096;$/;"	f	class:FramePool	file:
+MessageHandler	src/com/raonix/vchat/GAEChannelClient.java	/^  public interface MessageHandler {$/;"	i	class:GAEChannelClient
+PCObserver	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private class PCObserver implements PeerConnection.Observer {$/;"	c	class:HyeanVChatTestActivity
+ProxyingMessageHandler	src/com/raonix/vchat/GAEChannelClient.java	/^     ProxyingMessageHandler(Activity activity, MessageHandler handler,$/;"	m	class:GAEChannelClient.ProxyingMessageHandler
+ProxyingMessageHandler	src/com/raonix/vchat/GAEChannelClient.java	/^  private static class ProxyingMessageHandler {$/;"	c	class:GAEChannelClient
+R	gen/com/raonix/vchat/R.java	/^public final class R {$/;"	c
+REMOTE	src/com/raonix/vchat/VideoStreamsView.java	/^  public static enum Endpoint { LOCAL, REMOTE };$/;"	e	enum:VideoStreamsView.Endpoint	file:
+RedirectResolver	src/com/raonix/vchat/AppRTCClient.java	/^  private class RedirectResolver extends AsyncTask<String, Void, String> {$/;"	c	class:AppRTCClient
+RoomParameterGetter	src/com/raonix/vchat/AppRTCClient.java	/^  private class RoomParameterGetter$/;"	c	class:AppRTCClient
+SDPObserver	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private class SDPObserver implements SdpObserver {$/;"	c	class:HyeanVChatTestActivity
+TAG	src/com/raonix/vchat/AppRTCClient.java	/^  private static final String TAG = "AppRTCClient";$/;"	f	class:AppRTCClient	file:
+TAG	src/com/raonix/vchat/GAEChannelClient.java	/^  private static final String TAG = "GAEChannelClient";$/;"	f	class:GAEChannelClient	file:
+TAG	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private static final String TAG = "HyeanVChatTestActivity";$/;"	f	class:HyeanVChatTestActivity	file:
+TAG	src/com/raonix/vchat/UnhandledExceptionHandler.java	/^  private static final String TAG = "AHyeanVChatTestActivity";$/;"	f	class:UnhandledExceptionHandler	file:
+TAG	src/com/raonix/vchat/VideoStreamsView.java	/^  private final static String TAG = "VideoStreamsView";$/;"	f	class:VideoStreamsView	file:
+UnhandledExceptionHandler	src/com/raonix/vchat/UnhandledExceptionHandler.java	/^  public UnhandledExceptionHandler(final Activity activity) {$/;"	m	class:UnhandledExceptionHandler
+UnhandledExceptionHandler	src/com/raonix/vchat/UnhandledExceptionHandler.java	/^public class UnhandledExceptionHandler$/;"	c
+VERTEX_SHADER_STRING	src/com/raonix/vchat/VideoStreamsView.java	/^  private static final String VERTEX_SHADER_STRING =$/;"	f	class:VideoStreamsView	file:
+VideoCallbacks	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		public VideoCallbacks($/;"	m	class:HyeanVChatTestActivity.VideoCallbacks
+VideoCallbacks	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private class VideoCallbacks implements VideoRenderer.Callbacks {$/;"	c	class:HyeanVChatTestActivity
+VideoStreamsView	src/com/raonix/vchat/VideoStreamsView.java	/^  public VideoStreamsView(Context c, Point screenDimensions) {$/;"	m	class:VideoStreamsView
+VideoStreamsView	src/com/raonix/vchat/VideoStreamsView.java	/^public class VideoStreamsView$/;"	c
+abortUnless	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private static void abortUnless(boolean condition, String msg) {$/;"	m	class:HyeanVChatTestActivity	file:
+abortUnless	src/com/raonix/vchat/VideoStreamsView.java	/^  private static void abortUnless(boolean condition, String msg) {$/;"	m	class:VideoStreamsView	file:
+activity	src/com/raonix/vchat/AppRTCClient.java	/^  private final Activity activity;$/;"	f	class:AppRTCClient	file:
+activity	src/com/raonix/vchat/GAEChannelClient.java	/^    private final Activity activity;$/;"	f	class:GAEChannelClient.ProxyingMessageHandler	file:
+activity	src/com/raonix/vchat/UnhandledExceptionHandler.java	/^  private final Activity activity;$/;"	f	class:UnhandledExceptionHandler	file:
+addShaderTo	src/com/raonix/vchat/VideoStreamsView.java	/^  private static void addShaderTo($/;"	m	class:VideoStreamsView	file:
+appRTCSignalingParameters	src/com/raonix/vchat/AppRTCClient.java	/^  private AppRTCSignalingParameters appRTCSignalingParameters;$/;"	f	class:AppRTCClient	file:
+appRtcClient	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private AppRTCClient appRtcClient = new AppRTCClient(this, gaeHandler, this);$/;"	f	class:HyeanVChatTestActivity	file:
+app_name	gen/com/raonix/vchat/R.java	/^        public static final int app_name=0x7f030000;$/;"	f	class:R.string
+attr	gen/com/raonix/vchat/R.java	/^    public static final class attr {$/;"	c	class:R
+availableFrames	src/com/raonix/vchat/FramePool.java	/^  private final HashMap<Long, LinkedList<I420Frame>> availableFrames =$/;"	f	class:FramePool	file:
+channelClient	src/com/raonix/vchat/AppRTCClient.java	/^  private GAEChannelClient channelClient;$/;"	f	class:AppRTCClient	file:
+channelToken	src/com/raonix/vchat/AppRTCClient.java	/^    public final String channelToken;$/;"	f	class:AppRTCClient.AppRTCSignalingParameters
+checkNoGLES2Error	src/com/raonix/vchat/VideoStreamsView.java	/^  private static void checkNoGLES2Error() {$/;"	m	class:VideoStreamsView	file:
+close	src/com/raonix/vchat/GAEChannelClient.java	/^  public void close() {$/;"	m	class:GAEChannelClient
+closeSocket	assets/channel.html	/^      function closeSocket() {$/;"	f
+com.raonix.vchat	gen/com/raonix/vchat/BuildConfig.java	/^package com.raonix.vchat;$/;"	p
+com.raonix.vchat	gen/com/raonix/vchat/R.java	/^package com.raonix.vchat;$/;"	p
+com.raonix.vchat	src/com/raonix/vchat/AppRTCClient.java	/^package com.raonix.vchat;$/;"	p
+com.raonix.vchat	src/com/raonix/vchat/FramePool.java	/^package com.raonix.vchat;$/;"	p
+com.raonix.vchat	src/com/raonix/vchat/GAEChannelClient.java	/^package com.raonix.vchat;$/;"	p
+com.raonix.vchat	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^package com.raonix.vchat;$/;"	p
+com.raonix.vchat	src/com/raonix/vchat/UnhandledExceptionHandler.java	/^package com.raonix.vchat;$/;"	p
+com.raonix.vchat	src/com/raonix/vchat/VideoStreamsView.java	/^package com.raonix.vchat;$/;"	p
+connectToRoom	src/com/raonix/vchat/AppRTCClient.java	/^  public void connectToRoom(String url) {$/;"	m	class:AppRTCClient
+connectToRoom	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private void connectToRoom(String roomUrl) {$/;"	m	class:HyeanVChatTestActivity	file:
+constraintsFromJSON	src/com/raonix/vchat/AppRTCClient.java	/^    private MediaConstraints constraintsFromJSON(String jsonString) {$/;"	m	class:AppRTCClient.RoomParameterGetter	file:
+directNativeFloatBuffer	src/com/raonix/vchat/VideoStreamsView.java	/^  private static FloatBuffer directNativeFloatBuffer(float[] array) {$/;"	m	class:VideoStreamsView	file:
+disconnect	src/com/raonix/vchat/AppRTCClient.java	/^  public void disconnect() {$/;"	m	class:AppRTCClient
+disconnect	src/com/raonix/vchat/GAEChannelClient.java	/^    public void disconnect() {$/;"	m	class:GAEChannelClient.ProxyingMessageHandler
+disconnectAndExit	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private void disconnectAndExit() {$/;"	m	class:HyeanVChatTestActivity	file:
+disconnected	src/com/raonix/vchat/GAEChannelClient.java	/^    private boolean disconnected() {$/;"	m	class:GAEChannelClient.ProxyingMessageHandler	file:
+disconnected	src/com/raonix/vchat/GAEChannelClient.java	/^    private final boolean[] disconnected = { false };$/;"	f	class:GAEChannelClient.ProxyingMessageHandler	file:
+doInBackground	src/com/raonix/vchat/AppRTCClient.java	/^    protected AppRTCSignalingParameters doInBackground(String... urls) {$/;"	m	class:AppRTCClient.RoomParameterGetter
+doInBackground	src/com/raonix/vchat/AppRTCClient.java	/^    protected String doInBackground(String... urls) {$/;"	m	class:AppRTCClient.RedirectResolver
+drainRemoteCandidates	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		private void drainRemoteCandidates() {$/;"	m	class:HyeanVChatTestActivity.SDPObserver	file:
+drainStream	src/com/raonix/vchat/AppRTCClient.java	/^  private static String drainStream(InputStream in) {$/;"	m	class:AppRTCClient	file:
+drawRectangle	src/com/raonix/vchat/VideoStreamsView.java	/^  private void drawRectangle(int[] textures, FloatBuffer vertices) {$/;"	m	class:VideoStreamsView	file:
+drawable	gen/com/raonix/vchat/R.java	/^    public static final class drawable {$/;"	c	class:R
+factory	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private PeerConnectionFactory factory;$/;"	f	class:HyeanVChatTestActivity	file:
+followRedirect	src/com/raonix/vchat/AppRTCClient.java	/^    private String followRedirect(String url) throws IOException {$/;"	m	class:AppRTCClient.RedirectResolver	file:
+framePool	src/com/raonix/vchat/VideoStreamsView.java	/^  private FramePool framePool = new FramePool();$/;"	f	class:VideoStreamsView	file:
+framesToRender	src/com/raonix/vchat/VideoStreamsView.java	/^  private EnumMap<Endpoint, I420Frame> framesToRender =$/;"	f	class:VideoStreamsView	file:
+gaeBaseHref	src/com/raonix/vchat/AppRTCClient.java	/^    public final String gaeBaseHref;$/;"	f	class:AppRTCClient.AppRTCSignalingParameters
+gaeHandler	src/com/raonix/vchat/AppRTCClient.java	/^  private final GAEChannelClient.MessageHandler gaeHandler;$/;"	f	class:AppRTCClient	file:
+gaeHandler	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private final GAEChannelClient.MessageHandler gaeHandler = new GAEHandler();$/;"	f	class:HyeanVChatTestActivity	file:
+getParametersForRoomUrl	src/com/raonix/vchat/AppRTCClient.java	/^    private AppRTCSignalingParameters getParametersForRoomUrl(String url)$/;"	m	class:AppRTCClient.RoomParameterGetter	file:
+getRecursiveStackTrace	src/com/raonix/vchat/UnhandledExceptionHandler.java	/^  private static String getRecursiveStackTrace(Throwable t) {$/;"	m	class:UnhandledExceptionHandler	file:
+getToken	src/com/raonix/vchat/GAEChannelClient.java	/^    @JavascriptInterface public String getToken() {$/;"	m	class:GAEChannelClient.ProxyingMessageHandler
+getTopLevelCauseMessage	src/com/raonix/vchat/UnhandledExceptionHandler.java	/^  private static String getTopLevelCauseMessage(Throwable t) {$/;"	m	class:UnhandledExceptionHandler	file:
+getVarValue	src/com/raonix/vchat/AppRTCClient.java	/^    private String getVarValue($/;"	m	class:AppRTCClient.RoomParameterGetter	file:
+getVideoCapturer	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private VideoCapturer getVideoCapturer() {$/;"	m	class:HyeanVChatTestActivity	file:
+getVideoConstraints	src/com/raonix/vchat/AppRTCClient.java	/^    private String getVideoConstraints(String mediaConstraintsString) {$/;"	m	class:AppRTCClient.RoomParameterGetter	file:
+handler	src/com/raonix/vchat/GAEChannelClient.java	/^    private final MessageHandler handler;$/;"	f	class:GAEChannelClient.ProxyingMessageHandler	file:
+ic_launcher	gen/com/raonix/vchat/R.java	/^        public static final int ic_launcher=0x7f020000;$/;"	f	class:R.drawable
+iceServers	src/com/raonix/vchat/AppRTCClient.java	/^    public final List<PeerConnection.IceServer> iceServers;$/;"	f	class:AppRTCClient.AppRTCSignalingParameters
+iceServersFromPCConfigJSON	src/com/raonix/vchat/AppRTCClient.java	/^  private LinkedList<PeerConnection.IceServer> iceServersFromPCConfigJSON($/;"	m	class:AppRTCClient	file:
+iceServersObserver	src/com/raonix/vchat/AppRTCClient.java	/^  private final IceServersObserver iceServersObserver;$/;"	f	class:AppRTCClient	file:
+initiator	src/com/raonix/vchat/AppRTCClient.java	/^    public final boolean initiator;$/;"	f	class:AppRTCClient.AppRTCSignalingParameters
+isInitiator	src/com/raonix/vchat/AppRTCClient.java	/^  public boolean isInitiator() {$/;"	m	class:AppRTCClient
+jsonPut	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private static void jsonPut(JSONObject json, String key, Object value) {$/;"	m	class:HyeanVChatTestActivity	file:
+lastFPSLogTime	src/com/raonix/vchat/VideoStreamsView.java	/^  private long lastFPSLogTime = System.nanoTime();$/;"	f	class:VideoStreamsView	file:
+localVertices	src/com/raonix/vchat/VideoStreamsView.java	/^  private static final FloatBuffer localVertices = directNativeFloatBuffer($/;"	f	class:VideoStreamsView	file:
+logAndToast	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private void logAndToast(String msg) {$/;"	m	class:HyeanVChatTestActivity	file:
+logToast	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private Toast logToast;$/;"	f	class:HyeanVChatTestActivity	file:
+maybeDrainQueue	src/com/raonix/vchat/AppRTCClient.java	/^  private void maybeDrainQueue() {$/;"	m	class:AppRTCClient	file:
+numFramesSinceLastLog	src/com/raonix/vchat/VideoStreamsView.java	/^  private long numFramesSinceLastLog = 0;$/;"	f	class:VideoStreamsView	file:
+onAddStream	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@Override public void onAddStream(final MediaStream stream){$/;"	m	class:HyeanVChatTestActivity.PCObserver
+onClose	src/com/raonix/vchat/GAEChannelClient.java	/^    @JavascriptInterface public void onClose() {$/;"	m	class:GAEChannelClient.ProxyingMessageHandler
+onClose	src/com/raonix/vchat/GAEChannelClient.java	/^    public void onClose();$/;"	m	interface:GAEChannelClient.MessageHandler
+onClose	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@JavascriptInterface public void onClose() {$/;"	m	class:HyeanVChatTestActivity.GAEHandler
+onCreate	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	public void onCreate(Bundle savedInstanceState) {$/;"	m	class:HyeanVChatTestActivity
+onCreateFailure	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		public void onCreateFailure(final String error) {$/;"	m	class:HyeanVChatTestActivity.SDPObserver
+onCreateSuccess	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		public void onCreateSuccess(final SessionDescription origSdp) {$/;"	m	class:HyeanVChatTestActivity.SDPObserver
+onDataChannel	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@Override public void onDataChannel(final DataChannel dc) {$/;"	m	class:HyeanVChatTestActivity.PCObserver
+onDestroy	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	protected void onDestroy() {$/;"	m	class:HyeanVChatTestActivity
+onDrawFrame	src/com/raonix/vchat/VideoStreamsView.java	/^  public void onDrawFrame(GL10 unused) {$/;"	m	class:VideoStreamsView
+onError	src/com/raonix/vchat/GAEChannelClient.java	/^    @JavascriptInterface public void onError($/;"	m	class:GAEChannelClient.ProxyingMessageHandler
+onError	src/com/raonix/vchat/GAEChannelClient.java	/^    public void onError(int code, String description);$/;"	m	interface:GAEChannelClient.MessageHandler
+onError	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@JavascriptInterface public void onError(int code, String description) {$/;"	m	class:HyeanVChatTestActivity.GAEHandler
+onError	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@Override public void onError(){$/;"	m	class:HyeanVChatTestActivity.PCObserver
+onIceCandidate	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@Override public void onIceCandidate(final IceCandidate candidate){$/;"	m	class:HyeanVChatTestActivity.PCObserver
+onIceConnectionChange	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@Override public void onIceConnectionChange($/;"	m	class:HyeanVChatTestActivity.PCObserver
+onIceGatheringChange	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@Override public void onIceGatheringChange($/;"	m	class:HyeanVChatTestActivity.PCObserver
+onIceServers	src/com/raonix/vchat/AppRTCClient.java	/^    public void onIceServers(List<PeerConnection.IceServer> iceServers);$/;"	m	interface:AppRTCClient.IceServersObserver
+onIceServers	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	public void onIceServers(List<PeerConnection.IceServer> iceServers) {$/;"	m	class:HyeanVChatTestActivity
+onMeasure	src/com/raonix/vchat/VideoStreamsView.java	/^  protected void onMeasure(int unusedX, int unusedY) {$/;"	m	class:VideoStreamsView
+onMessage	src/com/raonix/vchat/GAEChannelClient.java	/^    @JavascriptInterface public void onMessage(final String data) {$/;"	m	class:GAEChannelClient.ProxyingMessageHandler
+onMessage	src/com/raonix/vchat/GAEChannelClient.java	/^    public void onMessage(String data);$/;"	m	interface:GAEChannelClient.MessageHandler
+onMessage	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@JavascriptInterface public void onMessage(String data) {$/;"	m	class:HyeanVChatTestActivity.GAEHandler
+onOpen	src/com/raonix/vchat/GAEChannelClient.java	/^    @JavascriptInterface public void onOpen() {$/;"	m	class:GAEChannelClient.ProxyingMessageHandler
+onOpen	src/com/raonix/vchat/GAEChannelClient.java	/^    public void onOpen();$/;"	m	interface:GAEChannelClient.MessageHandler
+onOpen	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@JavascriptInterface public void onOpen() {$/;"	m	class:HyeanVChatTestActivity.GAEHandler
+onPause	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	public void onPause() {$/;"	m	class:HyeanVChatTestActivity
+onPostExecute	src/com/raonix/vchat/AppRTCClient.java	/^    protected void onPostExecute(AppRTCSignalingParameters params) {$/;"	m	class:AppRTCClient.RoomParameterGetter
+onPostExecute	src/com/raonix/vchat/AppRTCClient.java	/^    protected void onPostExecute(String url) {$/;"	m	class:AppRTCClient.RedirectResolver
+onRemoveStream	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@Override public void onRemoveStream(final MediaStream stream){$/;"	m	class:HyeanVChatTestActivity.PCObserver
+onResume	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	public void onResume() {$/;"	m	class:HyeanVChatTestActivity
+onSetFailure	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		public void onSetFailure(final String error) {$/;"	m	class:HyeanVChatTestActivity.SDPObserver
+onSetSuccess	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		public void onSetSuccess() {$/;"	m	class:HyeanVChatTestActivity.SDPObserver
+onSignalingChange	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		@Override public void onSignalingChange($/;"	m	class:HyeanVChatTestActivity.PCObserver
+onSurfaceChanged	src/com/raonix/vchat/VideoStreamsView.java	/^  public void onSurfaceChanged(GL10 unused, int width, int height) {$/;"	m	class:VideoStreamsView
+onSurfaceCreated	src/com/raonix/vchat/VideoStreamsView.java	/^  public void onSurfaceCreated(GL10 unused, EGLConfig config) {$/;"	m	class:VideoStreamsView
+openSocket	assets/channel.html	/^      function openSocket() {$/;"	f
+pc	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private PeerConnection pc;$/;"	f	class:HyeanVChatTestActivity	file:
+pcConstraints	src/com/raonix/vchat/AppRTCClient.java	/^    public final MediaConstraints pcConstraints;$/;"	f	class:AppRTCClient.AppRTCSignalingParameters
+pcConstraints	src/com/raonix/vchat/AppRTCClient.java	/^  public MediaConstraints pcConstraints() {$/;"	m	class:AppRTCClient
+pcObserver	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private final PCObserver pcObserver = new PCObserver();$/;"	f	class:HyeanVChatTestActivity	file:
+posLocation	src/com/raonix/vchat/VideoStreamsView.java	/^  private int posLocation = -1;$/;"	f	class:VideoStreamsView	file:
+postMessageUrl	src/com/raonix/vchat/AppRTCClient.java	/^    public final String postMessageUrl;$/;"	f	class:AppRTCClient.AppRTCSignalingParameters
+preferISAC	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private String preferISAC(String sdpDescription) {$/;"	m	class:HyeanVChatTestActivity	file:
+proxyingMessageHandler	src/com/raonix/vchat/GAEChannelClient.java	/^  private final ProxyingMessageHandler proxyingMessageHandler;$/;"	f	class:GAEChannelClient	file:
+queueFrame	src/com/raonix/vchat/VideoStreamsView.java	/^  public void queueFrame(final Endpoint stream, I420Frame frame) {$/;"	m	class:VideoStreamsView
+queuedRemoteCandidates	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private LinkedList<IceCandidate> queuedRemoteCandidates =$/;"	f	class:HyeanVChatTestActivity	file:
+quit	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private final Boolean[] quit = new Boolean[] { false };$/;"	f	class:HyeanVChatTestActivity	file:
+rects	src/com/raonix/vchat/VideoStreamsView.java	/^  private EnumMap<Endpoint, Rect> rects =$/;"	f	class:VideoStreamsView	file:
+remoteVertices	src/com/raonix/vchat/VideoStreamsView.java	/^  private static final FloatBuffer remoteVertices = directNativeFloatBuffer($/;"	f	class:VideoStreamsView	file:
+renderFrame	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		public void renderFrame(I420Frame frame) {$/;"	m	class:HyeanVChatTestActivity.VideoCallbacks
+requestQueueDrainInBackground	src/com/raonix/vchat/AppRTCClient.java	/^  private void requestQueueDrainInBackground() {$/;"	m	class:AppRTCClient	file:
+requestTurnServer	src/com/raonix/vchat/AppRTCClient.java	/^    private PeerConnection.IceServer requestTurnServer(String url) {$/;"	m	class:AppRTCClient.RoomParameterGetter	file:
+returnFrame	src/com/raonix/vchat/FramePool.java	/^  public void returnFrame(I420Frame frame) {$/;"	m	class:FramePool
+screenDimensions	src/com/raonix/vchat/VideoStreamsView.java	/^  private Point screenDimensions;$/;"	f	class:VideoStreamsView	file:
+sdpMediaConstraints	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private MediaConstraints sdpMediaConstraints;$/;"	f	class:HyeanVChatTestActivity	file:
+sdpObserver	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private final SDPObserver sdpObserver = new SDPObserver();$/;"	f	class:HyeanVChatTestActivity	file:
+sendMessage	src/com/raonix/vchat/AppRTCClient.java	/^  public synchronized void sendMessage(String msg) {$/;"	m	class:AppRTCClient
+sendMessage	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private void sendMessage(JSONObject json) {$/;"	m	class:HyeanVChatTestActivity	file:
+sendQueue	src/com/raonix/vchat/AppRTCClient.java	/^  private LinkedList<String> sendQueue = new LinkedList<String>();$/;"	f	class:AppRTCClient	file:
+setSize	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		public void setSize(final int width, final int height) {$/;"	m	class:HyeanVChatTestActivity.VideoCallbacks
+setSize	src/com/raonix/vchat/VideoStreamsView.java	/^  public void setSize(Endpoint stream, int width, int height) {$/;"	m	class:VideoStreamsView
+showGetRoomUI	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private void showGetRoomUI() {$/;"	m	class:HyeanVChatTestActivity	file:
+stream	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		private final VideoStreamsView.Endpoint stream;$/;"	f	class:HyeanVChatTestActivity.VideoCallbacks	file:
+string	gen/com/raonix/vchat/R.java	/^    public static final class string {$/;"	c	class:R
+summarizeFrameDimensions	src/com/raonix/vchat/FramePool.java	/^  private static long summarizeFrameDimensions(I420Frame frame) {$/;"	m	class:FramePool	file:
+takeFrame	src/com/raonix/vchat/FramePool.java	/^  public I420Frame takeFrame(I420Frame source) {$/;"	m	class:FramePool
+texImage2D	src/com/raonix/vchat/VideoStreamsView.java	/^  private void texImage2D(I420Frame frame, int[] textures) {$/;"	m	class:VideoStreamsView	file:
+textureCoords	src/com/raonix/vchat/VideoStreamsView.java	/^  private static final FloatBuffer textureCoords = directNativeFloatBuffer($/;"	f	class:VideoStreamsView	file:
+token	src/com/raonix/vchat/GAEChannelClient.java	/^    private final String token;$/;"	f	class:GAEChannelClient.ProxyingMessageHandler	file:
+uncaughtException	src/com/raonix/vchat/UnhandledExceptionHandler.java	/^  public void uncaughtException(Thread unusedThread, final Throwable e) {$/;"	m	class:UnhandledExceptionHandler
+updateFrames	src/com/raonix/vchat/VideoStreamsView.java	/^  private void updateFrames() {$/;"	m	class:VideoStreamsView	file:
+validateDimensions	src/com/raonix/vchat/FramePool.java	/^  public static boolean validateDimensions(I420Frame frame) {$/;"	m	class:FramePool
+videoConstraints	src/com/raonix/vchat/AppRTCClient.java	/^    public final MediaConstraints videoConstraints;$/;"	f	class:AppRTCClient.AppRTCSignalingParameters
+videoConstraints	src/com/raonix/vchat/AppRTCClient.java	/^  public MediaConstraints videoConstraints() {$/;"	m	class:AppRTCClient
+videoSource	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private VideoSource videoSource;$/;"	f	class:HyeanVChatTestActivity	file:
+view	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^		private final VideoStreamsView view;$/;"	f	class:HyeanVChatTestActivity.VideoCallbacks	file:
+vsv	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private VideoStreamsView vsv;$/;"	f	class:HyeanVChatTestActivity	file:
+wakeLock	src/com/raonix/vchat/HyeanVChatTestActivity.java	/^	private PowerManager.WakeLock wakeLock;$/;"	f	class:HyeanVChatTestActivity	file:
+webView	src/com/raonix/vchat/GAEChannelClient.java	/^  private WebView webView;$/;"	f	class:GAEChannelClient	file:
+yuvTextures	src/com/raonix/vchat/VideoStreamsView.java	/^  private int[][] yuvTextures = { { -1, -1, -1}, {-1, -1, -1 }};$/;"	f	class:VideoStreamsView	file:
