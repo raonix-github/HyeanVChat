@@ -74,7 +74,6 @@ public class AppRTCClient {
 	private LinkedList<String> sendQueue = new LinkedList<String>();
 	private AppRTCSignalingParameters appRTCSignalingParameters;
 	
-
 	
 	public void connectToRoom() {
 		(new ParameterGetter()).execute();
@@ -147,7 +146,11 @@ public class AppRTCClient {
 	{
 		if(mXmppClient!=null&&mXmppClient.isConnected())
 		{
+			if(!message.startsWith("R9HAUTO_JSON"))
+				message="JSON_VIDEOCHAT"+"\n"+message;
+
 			mXmppClient.sendMessage(REMOTE_ID, message);
+
 			return true;
 		}
 		return false;

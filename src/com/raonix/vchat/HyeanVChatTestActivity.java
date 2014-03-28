@@ -34,11 +34,14 @@ import android.content.Intent;
 import android.graphics.Point;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.PowerManager;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -59,7 +62,6 @@ import org.webrtc.VideoRenderer;
 import org.webrtc.VideoRenderer.I420Frame;
 import org.webrtc.VideoSource;
 import org.webrtc.VideoTrack;
-
 
 import java.util.EnumSet;
 import java.util.LinkedList;
@@ -88,23 +90,44 @@ public class HyeanVChatTestActivity extends Activity
 	private MediaConstraints sdpMediaConstraints;
 	private PowerManager.WakeLock wakeLock;
 
+	private static final String JSONMESSAGE_INTERPHONE= "R9HAUTO_JSON\n"
+			+"{\n"
+			+"\"type\":\"request\",\n"
+			+"\"tag\":\"noseq\",\n"
+			+"\"devices\":\n"
+			+"[\n"
+			+"{\"devname\":\"system\", \"command\":\"interphone\", \"doorid\": @doorid}\n"
+			+"]\n"
+			+"}\n";
+
+	private Handler mHandler;	
+
+	
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		Thread.setDefaultUncaughtExceptionHandler(
 				new UnhandledExceptionHandler(this));
+		
+		mHandler=new Handler();
 
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-//		Point displaySize = new Point(400,400);
-//		Point displaySize = new Point();
-//		getWindowManager().getDefaultDisplay().getSize(displaySize);
-//		vsv = new VideoStreamsView(this, displaySize);
 
-		vsv = new VideoStreamsView(this);
-		setContentView(vsv);
+		if(Build.MODE_SERVER)
+		{
+			TextView v=new TextView(this);
+			v.setText("No video stream view.");
+			setContentView(v);
+		}
+		else
+		{
+			vsv = new VideoStreamsView(this);
+			setContentView(vsv);
+		}
 
 		abortUnless(PeerConnectionFactory.initializeAndroidGlobals(this),
 				"Failed to initializeAndroidGlobals");
@@ -153,7 +176,8 @@ public class HyeanVChatTestActivity extends Activity
 	@Override
 	public void onPause() {
 		super.onPause();
-		vsv.onPause();
+		if(vsv!=null)
+			vsv.onPause();
 		if (videoSource != null) {
 			videoSource.stop();
 		}
@@ -162,7 +186,8 @@ public class HyeanVChatTestActivity extends Activity
 	@Override
 	public void onResume() {
 		super.onResume();
-		vsv.onResume();
+		if(vsv!=null)
+			vsv.onResume();
 		if (videoSource != null) {
 			videoSource.restart();
 		}
@@ -181,6 +206,7 @@ public class HyeanVChatTestActivity extends Activity
 		//     EnumSet.of(Logging.TraceLevel.TRACE_ALL),
 		//     Logging.Severity.LS_SENSITIVE);
 
+		if(vsv!=null)
 		{
 			final PeerConnection finalPC = pc;
 			final Runnable repeatedStatsLogger = new Runnable() {
@@ -216,14 +242,39 @@ public class HyeanVChatTestActivity extends Activity
 						capturer, appRtcClient.videoConstraints());
 				VideoTrack videoTrack =
 					factory.createVideoTrack("ARDAMSv0", videoSource);
-				videoTrack.addRenderer(new VideoRenderer(new VideoCallbacks(
-								vsv, VideoStreamsView.Endpoint.LOCAL)));
+
+				if(vsv!=null)
+					videoTrack.addRenderer(new VideoRenderer(new VideoCallbacks(
+							vsv, VideoStreamsView.Endpoint.LOCAL)));
+				else
+					videoTrack.addRenderer(new VideoRenderer(new VideoCallbacksDummy()));
+
 				lMS.addTrack(videoTrack);
 			}
 			lMS.addTrack(factory.createAudioTrack("ARDAMSa0"));
 			pc.addStream(lMS, new MediaConstraints());
 		}
-		logAndToast("Waiting for ICE candidates...");
+		
+		mHandler.post(new Runnable()
+			{
+				@Override
+				public void run()
+				{
+					appRtcClient.sendMessage(
+							JSONMESSAGE_INTERPHONE.replace("@doorid", Integer.toString(0)) );
+				}
+			});
+
+		mHandler.postDelayed(new Runnable()
+			{
+				@Override
+				public void run()
+				{
+					logAndToast("Waiting for ICE candidates...");
+					appRtcClient.sendMessage("{\"type\":\"notify\",\"status\":\"connected\"}");
+				}
+			}, 2000);
+
 	}
 
 	// Cycle through likely device names for the camera and return the first
@@ -377,8 +428,12 @@ public class HyeanVChatTestActivity extends Activity
 						stream.videoTracks.size() <= 1,
 						"Weird-looking stream: " + stream);
 					if (stream.videoTracks.size() == 1) {
-						stream.videoTracks.get(0).addRenderer(new VideoRenderer(
-								new VideoCallbacks(vsv, VideoStreamsView.Endpoint.REMOTE)));
+						if(vsv!=null)
+							stream.videoTracks.get(0).addRenderer(new VideoRenderer(
+									new VideoCallbacks(vsv, VideoStreamsView.Endpoint.REMOTE)));
+						else
+							stream.videoTracks.get(0).addRenderer(new VideoRenderer(
+									new VideoCallbacksDummy()));
 					}
 				}
 			});
@@ -478,6 +533,15 @@ public class HyeanVChatTestActivity extends Activity
 	private class XMPPMessageListener implements XmppClient.OnMessageListener {
 		@Override
 		public void onMessage(String from, String msg, XmppClient client) {
+
+			if(!msg.startsWith("JSON_VIDEOCHAT"))
+			{
+				Log.i(TAG, "Unknown message :"+msg);
+				return;
+			}
+			
+			msg=msg.substring(msg.indexOf('{'));
+			
 			try {
 				JSONObject json = new JSONObject(msg);
 				String type = (String) json.get("type");
@@ -499,8 +563,8 @@ public class HyeanVChatTestActivity extends Activity
 				} else if (type.equals("bye")) {
 					logAndToast("Remote end hung up; dropping PeerConnection");
 					disconnectAndExit();
-				} else {
-					throw new RuntimeException("Unexpected message: " + msg);
+				} else if (type.equals("notify")){
+					logAndToast("Remote "+json.getString("status"));
 				}
 			} catch (JSONException e) {
 				throw new RuntimeException(e);
@@ -561,6 +625,26 @@ public class HyeanVChatTestActivity extends Activity
 		@Override
 		public void renderFrame(I420Frame frame) {
 			view.queueFrame(stream, frame);
+		}
+	}
+	
+	
+	// Implementation detail: bridge the VideoRenderer.Callbacks interface to the
+	// VideoStreamsView implementation.
+	private class VideoCallbacksDummy implements VideoRenderer.Callbacks {
+
+		@Override
+		public void renderFrame(I420Frame arg0)
+		{
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void setSize(int arg0, int arg1)
+		{
+			// TODO Auto-generated method stub
+			
 		}
 	}
 }
